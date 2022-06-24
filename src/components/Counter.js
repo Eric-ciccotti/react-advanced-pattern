@@ -9,7 +9,7 @@ const Counter = ({ max }) => {
     return (
         <React.Fragment>
             <p>Nombre de caractère : {wordsLength}</p>
-            {hasError && <p>Nombre de caratère maximum atteint</p>}
+            {hasError && <p>Nombre de caratère maximum atteint.</p>}
         </React.Fragment >
     )
 }
