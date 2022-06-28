@@ -1,0 +1,26 @@
+.snow-flake {
+    width: 5px;
+    height: 5px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: snow 6s infinite linear;
+  }
+  .translate {
+    position: absolute;
+    animation: translate 2s alternate infinite ease-in-out;
+  }
+  
+  @keyframes snow {
+    to {
+      transform: translateY(100vh);
+    }
+  }
+  @keyframes translate {
+    to {
+      transform: translateX(50px);
+    }
+  }
+  

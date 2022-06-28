@@ -4,10 +4,9 @@ import { Counter } from './components/Counter';
 import { InputField } from './components/InputField';
 import { Label } from './components/Label';
 
-const LetterCounter = ({children}) => {
+const LetterCounter = ({ children, hide }) => {
     const [wordsLength, setWordsLenght] = useState(0)
     const [enteredWord, setEnteredWord] = useState(null);
-
 
     const setWord = (e) => {
         const inputWithoutSpace = e.target.value.replace(/\s/g, '');
@@ -16,10 +15,11 @@ const LetterCounter = ({children}) => {
         console.log(inputWithoutSpace.length);
     }
 
-  return (
-    <LetterContextProvider value={{setWord, wordsLength, enteredWord}}>
-        {children}
-    </LetterContextProvider>
+
+    return (
+            <LetterContextProvider value={{ setWord, wordsLength, enteredWord }}>
+                {children}
+            </LetterContextProvider>
     )
 }
 
