@@ -1,15 +1,18 @@
-import React from "react";
-import { useLetterContext } from "../useLetterContext";
+import React from 'react';
+import { useLetterContext } from '../useLetterContext';
 
-const InputField = ({max}) => {
-    const { setWord, enteredWord } = useLetterContext();
+const InputField = () => {
+  const { setWord, enteredWord, max } = useLetterContext();
 
-    return (
-        <div>
-            <input type="text" onChange={setWord} disabled={enteredWord?.length >= max}/>
-
-        </div>
-    );
+  return (
+    <div>
+      <input
+        type="text"
+        onChange={setWord}
+        disabled={enteredWord?.length >= max}
+      />
+    </div>
+  );
 };
 
-export {InputField};
+export { InputField };
